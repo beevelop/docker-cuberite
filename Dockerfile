@@ -8,10 +8,11 @@ COPY webadmin.ini.tpl /opt/
 
 WORKDIR /opt
 RUN apt-get update && apt-get install -y curl gettext-base && \
-    curl -sSfL https://download.cuberite.org | sh && \
-    mv Server cuberite
+    mkdir cuberite && cd cuberite && \
+    curl -sSfL https://download.cuberite.org | sh
 
 WORKDIR /opt/cuberite
+
 CMD envsubst < /opt/webadmin.ini.tpl > webadmin.ini && ./Cuberite -s $MAX_PLAYERS
 
 EXPOSE 8080 25565
