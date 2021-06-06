@@ -31,3 +31,9 @@ All necessary file are located at `/opt/cuberite`.
 
 ## Troubleshooting
 Feel free to open an issue on GitHub if you encounter any problems with this Docker image.
+
+---
+
+### Use tags where possible, because...
+
+![One does not simply use latest](https://i.imgflip.com/1fgwxr.jpg)
